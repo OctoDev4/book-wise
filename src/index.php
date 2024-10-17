@@ -9,23 +9,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="bg-stone-950  text-stone-400">
+<body class="bg-stone-950  text-stone-200">
 
 
- <header>
+ <header class="bg-stone-900">
 
-     <nav class="bg-red-500 flex mx- justify-between">
-         <div>BookWise</div>
+     <nav class="mx-auto max-w-screen-lg flex justify-between px-8 py-4">
+         <div class="font-bold text-xl tracking-wide">BookWise</div>
 
-         <ul class="flex ">
-             <li><a>explorar</a></li>
-             <li><a>meus livros</a></li>
-             <li><a>explorar</a></li>
-
+         <ul class="flex space-x-6 font-bold">
+             <li><a href="/" class="text-lime-600 ">Explorar</a></li>
+             <li><a href="/my-books.php" class="hover:underline">meus livros</a></li>
+        
          </ul>
 
          <ul>
-             <li><a>Fazer Login</a></li>
+             <li><a href="/login.php" class="hover:underline">Fazer Login</a></li>
          </ul>
 
 
@@ -33,8 +32,25 @@
  </header>
 
 
-<main>
-    lista de livros
+<main class="mx-auto max-w-screen-lg space-y-10">
+
+
+<h1 class="mt-6 font-bold text">Explorar</h1>
+
+  <form action="" class="w-full flex space-x-2">
+    <input 
+    name="search"
+    placeholder="Pesquisar..."
+    type="text" 
+    class="border-stone-800 bg-stone-900 text-sm border-2 rounded-md text-sm focus:outline-none px-2 py-1 w-full">
+    <button type="submit">🔎</button>
+  </form>
+
+
+ <div>
+   lista final
+ </div>
+
 </main>
 
 </body>
