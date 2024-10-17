@@ -47,9 +47,30 @@
   </form>
 
 
- <div>
-   lista final
+ <section class="space-y-4">
+
+ <!-- Livro-->
+ <div class="bg-blue-800">
+
+
+<div>imagem</div>
+
+
+<div>
+
+ <div>tittle</div>
+ <div>author</div>
+ <div>rating</div>
+
+</div>
+ 
+
+ <div>description
+
  </div>
+ </div>
+
+ </section>
 
 </main>
 
