@@ -1,23 +1,22 @@
-<?php
+<?php 
 
-require 'data.php';
+// Controlador padrão
+$controller = "index";
 
-$uri  = $_SERVER['REQUEST_URI'];
-$uriSemBarra = str_replace('/','',$uri);
+// Captura a URI solicitada
+$requestUri = $_SERVER['REQUEST_URI'];
 
-var_dump($uri , $uriSemBarra);
+// Remove a parte da query string, se existir
+$requestUri = strtok($requestUri, '?');
 
+// Remove a barra inicial
+$requestUri = ltrim($requestUri, '/');
 
+// Se a URI não estiver vazia, usa como controlador
+if (!empty($requestUri)) {
+    $controller = $requestUri; // Define o controlador
+}
 
-$view = "index";
-
- require "views/template/app.php";
+// Inclui o controlador
+require "controllers/{$controller}.controller.php"; 
 ?>
-
-
-
-
-
-
-
-
