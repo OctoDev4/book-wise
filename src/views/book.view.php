@@ -1,3 +1,4 @@
+<div class="min-h-screen">
 <article class="p-6 rounded bg-stone-900 border-stone-800 border-2">
     <div class="flex p-3">
         <figure class="w-1/3">imagem</figure>
@@ -12,3 +13,5 @@
         <?=$book['description']?>
     </div>
 </article>
+
+</div>

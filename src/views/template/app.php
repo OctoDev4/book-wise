@@ -21,7 +21,7 @@
         </ul>
     </nav>
 </header>
-<main class="mx-auto max-w-screen-lg space-y-10 mt-10">
+<main class="mx-auto max-w-screen-lg max-h-full space-y-10 mt-10">
     <?php require "views/{$view}.view.php" ?>
 </main>
 </body>
