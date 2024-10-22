@@ -14,10 +14,10 @@
         <div class="font-bold text-xl tracking-wide">BookWise</div>
         <ul class="flex space-x-6 font-bold">
             <li><a href="/" class="text-lime-600">Explorar</a></li>
-            <li><a href="/my-books.php" class="hover:underline">meus livros</a></li>
+            <li><a href="/my-books" class="hover:underline">meus livros</a></li>
         </ul>
         <ul>
-            <li><a href="/login.php" class="hover:underline">Fazer Login</a></li>
+            <li><a href="/login" class="hover:underline">Fazer Login</a></li>
         </ul>
     </nav>
 </header>

@@ -13,8 +13,8 @@
                     <img src="<?= $book['image'] ?>" alt="<?= $book['title'] ?>">
                 </figure>
                 <header class="p-1">
-                    <h2 class="font-semibold"><?= $book['title'] ?></h2>
-                    <p class="text-xs italic"><?= $book['author'] ?></p>
+                    <h2 class="font-semibold"><?=$book['title'] ?></h2>
+                    <p class="text-xs italic"><?=$book['author'] ?></p>
                     <p class="text-xs italic">⭐⭐⭐⭐⭐ (3 avaliações)</p>
                 </header>
             </div>

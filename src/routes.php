@@ -15,9 +15,7 @@ function loadController()
 
     // Verifica se o arquivo do controlador existe
     if (!file_exists("controllers/{$controller}.controller.php")) {
-        http_response_code(404);
-        echo 'page not found';
-        die();
+       abort(404);
     }
 
     // Inclui o controlador

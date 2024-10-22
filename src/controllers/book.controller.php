@@ -11,6 +11,14 @@ if (!$book) {
     $errorMessage = "Livro não encontrado.";
 }
 
-$view = "book"; // Define a view a ser carregada
-require_once "views/template/app.php"; // Carrega o template
+
+// Usando compact para passar a variável $book para a view
+view('book', compact('book')); // se o nome da variavel for igual ao que vc quer chamar pode usar o compact
+
+
+//[
+ //   'book' => $book // O valor de $book é o conteúdo da variável
+//]
+
+   //corresponde a isso
 ?>
