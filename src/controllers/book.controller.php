@@ -22,3 +22,4 @@ view('book', compact('book')); // se o nome da variavel for igual ao que vc quer
 
    //corresponde a isso
 ?>
+    

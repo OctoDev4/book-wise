@@ -1,6 +1,10 @@
 <?php 
 
-require 'data.php'; // Carrega seus dados
+
+$db = new DB();
+
+
+$books = $db->books();
 
 view('index',[
     'books'=>$books

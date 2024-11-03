@@ -14,14 +14,14 @@
                 <figure class="w-1/3">imagem</figure>
                 <header class="p-1">
                     <h2 class="font-semibold">
-                        <a href="book?id=<?=$book['id']?>" class="hover:underline"><?=$book['title']?></a>
+                        <a href="book?id=<?=$book->id?>" class="hover:underline"><?=$book->title?></a>
                     </h2>
-                    <p class="text-xs italic"><?=$book['author']?></p>
+                    <p class="text-xs italic"><?=$book->author?></p>
                     <p class="text-xs italic">⭐⭐⭐⭐⭐ (3 avaliações)</p>
                 </header>
             </div>
             <div class="text-sm mt-4">
-                <?=$book['description']?>
+                <?=$book->description?>
             </div>
         </article>
     <?php endforeach; ?>
