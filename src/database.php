@@ -1,35 +1,58 @@
 <?php
 
-class Book
-{
-    public $id;
-    public $title;
-    public $author;
-    public $description;
-}
 
+/**
+ * The DB class handles database operations.
+ */
 class DB
+
 {
+
+    private $db;
+
+
+    public function __construct(){
+
+        $this->db = new PDO('sqlite:database.sqlite');
+
+    }
+
     public function books()
     {
-        $db = new PDO('sqlite:database.sqlite');
-        $query = $db->query("SELECT * FROM books");
+
+
+
+       $query = $this->db->query("SELECT * FROM books");
 
         $items = $query->fetchAll();
 
-        $returnToBook = [];
+        return array_map(fn($item)=>Book::make($item), $items);
+
+    }
+
+
+    public function getBookById($id)
+    {
+
+       $sql = "SELECT * FROM books";
+
+       $sql .= " WHERE id =" .$id;
+
+
+        $query = $this->db->query($sql);
+
+       $items = $query->fetchAll();
+
+       $returnToBook = [];
+
+
 
         foreach ($items as $item) {
-            $book = new Book();
-            $book->id = $item['id'];
-            $book->title = $item['title'];
-            $book->author = $item['author'];
-            $book->description = $item['description'];
+            $book = Book::make($item);
 
             $returnToBook[] = $book;
         }
-
-        return $returnToBook;
+        return $returnToBook[0];
     }
 }
 ?>

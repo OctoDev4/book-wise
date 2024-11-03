@@ -1,7 +1,15 @@
 <?php
 
 //se tiver null ou array ou objeto vazio, eh opcional 
-function view($view,$data = []) {
+/**
+ * Renders a view with the provided data.
+ *
+ * @param string $view The name of the view to be rendered.
+ * @param array $data An associative array of data to be extracted and made available to the view.
+ *
+ * @return void
+ */
+function view($view, $data = []) {
 
 
 
@@ -15,6 +23,12 @@ function view($view,$data = []) {
     require "views/template/app.php"; 
 }
 
+/**
+ * Dumps the given variables for debugging purposes and terminates the script execution.
+ *
+ * @param mixed ...$dump Variables to be dumped
+ * @return void
+ */
 function dd(...$dump) {
     // Exibe variáveis para depuração
     echo '<pre>';
@@ -23,6 +37,12 @@ function dd(...$dump) {
     die(); // Para a execução do script
 }
 
+/**
+ * Ends the execution of the script with a given HTTP status code.
+ *
+ * @param int $code The HTTP status code to be set.
+ * @return void No return value.
+ */
 function abort($code) {
     // Define o código de status HTTP
     http_response_code($code); 
