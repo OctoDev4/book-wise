@@ -17,12 +17,14 @@ class DB
 
     }
 
-    public function books()
+    public function books($search = null)
     {
 
 
+       $sql = "SELECT * FROM books WHERE title LIKE '%$search%' OR author LIKE '%$search%' OR description LIKE '%$search%'";
 
-       $query = $this->db->query("SELECT * FROM books");
+
+       $query = $this->db->query($sql);
 
         $items = $query->fetchAll();
 
